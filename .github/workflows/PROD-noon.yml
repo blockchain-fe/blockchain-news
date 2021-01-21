@@ -1,0 +1,15 @@
+name: PROD noon
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - run: npm install
+      - run: DD_TOKEN=${{ secrets.DD_TOKEN_XIAOHUA_1 }} npm run noon

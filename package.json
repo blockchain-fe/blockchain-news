@@ -1,0 +1,20 @@
+{
+  "name": "blockchain-news",
+  "version": "1.0.0",
+  "description": "区块链资讯",
+  "scripts": {
+    "morning-total": "node ./src/actions/morning-total.js",
+    "morning": "node ./src/actions/morning.js",
+    "noon": "node ./src/actions/noon.js",
+    "night": "node ./src/actions/night.js",
+    "prices": "node ./src/actions/prices.js"
+  },
+  "author": "weini.cxw@antgroup.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.3",
+    "html-markdown": "^1.0.17",
+    "puppeteer": "^5.5.0"
+  }
+}
