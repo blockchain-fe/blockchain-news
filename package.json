@@ -13,8 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "currency.js": "^2.0.3",
     "dayjs": "^1.10.3",
     "html-markdown": "^1.0.17",
+    "number-precision": "^1.4.0",
     "puppeteer": "^5.5.0"
   }
 }
