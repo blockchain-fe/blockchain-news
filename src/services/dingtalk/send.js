@@ -9,12 +9,13 @@ module.exports = async ({
   isAtAll = false,
   showTime = true,
   showTail = true,
+  timeLabel = "更新时间",
 }) => {
   log.start("开始钉钉群发", `title: ${title}`, `content: \n\n${content}`);
 
-  const time = showTime ? `\n###### 更新时间：${getTime()}` : "";
+  const time = showTime ? `\n###### ${timeLabel}：${getTime()}` : "";
   const tail = showTail
-    ? "\n---\n###### 爬虫服务由 [蚂蚁链前端团队](https://www.yuque.com/antchain-fe/blog/joinus) 提供"
+    ? "\n---\n###### 由 [蚂蚁链前端团队](https://www.yuque.com/antchain-fe/blog/joinus) 提供爬虫服务"
     : "";
 
   const res = await axios({
