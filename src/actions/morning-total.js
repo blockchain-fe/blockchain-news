@@ -19,7 +19,7 @@ const token = process.env.DD_TOKEN;
 
   const getContent = (news) => {
     if (news) {
-      return news.map((item, i) => `#### ${i + 1}. ${item}`).join("\n");
+      return news.map((item, i) => `##### ${i + 1}. ${item}`).join("\n");
     }
   };
 
