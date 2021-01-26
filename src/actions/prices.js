@@ -9,16 +9,13 @@ const token = process.env.DD_TOKEN;
     const priceColor = data.isUp ? "#FF0000" : "#008000";
     const changeBefore = data.isUp ? "+" : "-";
     return `### ${name}
-##### 当前价：<font color="${priceColor}">${data.price}（${changeBefore}${data.change}）</font>
+##### <font color="${priceColor}">当前价：${data.price}（${changeBefore}${data.change}）</font>
 ##### 最高(24H)：${data.highPrice}
 ##### 最低(24H)：${data.lowPrice}
-##### 成交量(24H)：<font color="#9932CC">${data.dealDisplay}</font>
-##### 换手率：<font color="#9932CC">${data.dealRate}</font>
+##### <font color="#9932CC">成交量(24H)：${data.dealDisplay}</font>
+##### <font color="#9932CC">换手率：${data.dealRate}</font>
 ##### 总市值：${data.totalPriceDisplay}
-##### 市值占比：${data.totalPriceRate}
-##### 流通量：${data.flow}
-##### 总量：${data.maxFlow}
-##### 流通占比：${data.flowRate}`;
+##### 市值占比：${data.totalPriceRate}`;
   };
 
   const btc = await getProject("bitcoin");
