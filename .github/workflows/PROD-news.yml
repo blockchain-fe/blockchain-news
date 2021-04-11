@@ -1,9 +1,9 @@
-name: TEST morning total
+name: PROD news
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 23 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   start:
@@ -14,5 +14,4 @@ jobs:
         with:
           node-version: 14.x
       - run: npm install
-      - run: DD_TOKEN=${{ secrets.DD_TOKEN_TEST }} npm run morning-total
-      - run: DD_TOKEN=${{ secrets.DD_TOKEN_TEST_2 }} npm run morning-total
+      - run: DD_TOKEN=${{ secrets.DD_TOKEN_XIAOHUA_1 }} npm run news
