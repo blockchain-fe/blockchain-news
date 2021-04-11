@@ -7,15 +7,12 @@ module.exports = async ({
   title = "",
   content = "",
   isAtAll = false,
-  showTime = true,
-  showTail = true,
-  timeLabel = "更新时间",
+  showTail = false,
 }) => {
   log.start("开始钉钉群发", `title: ${title}`, `content: \n\n${content}`);
 
-  const time = showTime ? `\n###### ${timeLabel}：${getTime()}` : "";
   const tail = showTail
-    ? "\n---\n###### 由 [蚂蚁链前端团队](https://www.yuque.com/antchain-fe/blog/joinus) 提供爬虫服务"
+    ? `\n<font color="#DDDDDD">──────────</font>\n###### 由 [蚂蚁链前端团队](https://www.yuque.com/antchain-fe/blog/joinus) 提供爬虫服务`
     : "";
 
   const res = await axios({
@@ -24,8 +21,8 @@ module.exports = async ({
     data: {
       msgtype: "markdown",
       markdown: {
-        title: title,
-        text: `# ${title}${time}\n---\n${content}${tail}`,
+        title,
+        text: `# ${title}\n<font color="#DDDDDD">──────────</font>\n${content}${tail}`,
       },
       at: {
         isAtAll,

@@ -18,7 +18,7 @@ const getE = (m) => {
   const n = money2number(m);
   const e = NP.round(NP.divide(n, 100000000), 2);
   const eFormat = currency(e, { symbol: "$", separator: "," }).format();
-  return `${eFormat}亿`;
+  return `${eFormat} 亿`;
 };
 
 // 根据金额，计算比例
