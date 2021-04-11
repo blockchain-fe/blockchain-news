@@ -4,9 +4,6 @@
   "description": "区块链资讯",
   "scripts": {
     "morning-total": "node ./src/actions/morning-total.js",
-    "morning": "node ./src/actions/morning.js",
-    "noon": "node ./src/actions/noon.js",
-    "night": "node ./src/actions/night.js",
     "prices": "node ./src/actions/prices.js",
     "link:t": "ENV=test node ./.test/say/link.js",
     "link:p": "ENV=prod node ./.test/say/link.js"
