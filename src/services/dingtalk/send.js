@@ -22,7 +22,7 @@ module.exports = async ({
       msgtype: "markdown",
       markdown: {
         title,
-        text: `# ${title}\n<font color="#DDDDDD">──────────</font>\n${content}${tail}`,
+        text: `## ${title}\n<font color="#DDDDDD">──────────</font>\n${content}${tail}`,
       },
       at: {
         isAtAll,

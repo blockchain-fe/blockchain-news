@@ -1,12 +1,10 @@
 {
   "name": "blockchain-news",
   "version": "1.0.0",
-  "description": "区块链资讯",
+  "description": "区块链新闻爬虫",
   "scripts": {
     "news": "node ./src/actions/news.js",
-    "prices": "node ./src/actions/prices.js",
-    "link:t": "ENV=test node ./.test/say/link.js",
-    "link:p": "ENV=prod node ./.test/say/link.js"
+    "prices": "node ./src/actions/prices.js"
   },
   "author": "weini.cxw@antgroup.com",
   "license": "ISC",
