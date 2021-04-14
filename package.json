@@ -14,6 +14,9 @@
     "dayjs": "^1.10.3",
     "html-markdown": "^1.0.17",
     "number-precision": "^1.4.0",
-    "puppeteer": "^5.5.0"
+    "puppeteer": "^7.1.0",
+    "qrcode-terminal": "^0.12.0",
+    "wechaty": "^0.60.3",
+    "wechaty-puppet-wechat": "^0.28.1"
   }
 }
